@@ -7,8 +7,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <form action="<%=session_url%>" method="post">
+      <input type="hidden" name="_method" value="destroy">
+      <input type="submit" value="Sign Out">
+    </form>
     <%= yield %>
   </body>
 </html>
